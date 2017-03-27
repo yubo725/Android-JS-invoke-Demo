@@ -1,0 +1,22 @@
+<html>
+<body>
+<input type="text" placeholder="input page title" id="title-edit-text" />
+
+<input type="button" value="apply" id="apply-btn" onclick="changeTitle()"/>
+
+</body>
+
+<script type="text/javascript">
+    	function changeTitle() {
+    		var title = document.getElementById('title-edit-text').value
+    		if (window.js_interface) {
+    			window.js_interface.setPageTitle(title)
+    		}
+    	}
+
+    	function changeEditTextContent(content) {
+    	    document.getElementById('title-edit-text').value = content
+    	}
+    </script>
+
+</html>
